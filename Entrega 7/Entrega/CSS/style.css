@@ -30,7 +30,7 @@
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 25px 0px;
 }
 /* Modal */
-.modal-container {
+.modal-contenedor {
     display: flex;
     position: fixed; 
     background-color: transparent;
@@ -48,29 +48,36 @@
     z-index: 5;
 }
 .modal-carrito{
+    position: relative;
     padding: 2%;
-    width: 15rem;
+    min-width: 350px;
     height: 20rem;
     font-size:small;
+    border-radius: 10px;
     background-color: whitesmoke;
 }
 .modal-carrito button{
     font-size: medium;
-    color: black;
+    color: rgb(102, 100, 100);
     background-color: whitesmoke;
     border-left: none;
     border-left: lightblue;
     border: none;
-  }
+}
+.botoncarrito{
+    border: none;
+    background-color: rgb(168, 210, 252);
+
+}
 .productoEnCarrito {
     border-left: 5px solid lightblue;
     border-bottom-left-radius: 3px;
     border-top-left-radius: 3px;
-    margin: 5px;
+    margin: 5px 0;
+    padding: 5px 10px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-  }
+}
 
 /* SERVICOS */
 .btns{

@@ -10,7 +10,7 @@ const productos = [
 
     {
         id: 2,
-        nombre: "Paris",
+        nombre: "París",
         img: "../Imagenes/paris.jpg",
         desc: " Reservá tu paquete a París en cuotas sin interés! La más grande variedad de paquetes de viajes a París está acá.",
         precio: 680400,

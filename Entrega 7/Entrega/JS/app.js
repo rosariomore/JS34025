@@ -1,13 +1,11 @@
 import { validarProductoRepetido } from "./carritoIndex.js";
-import { productos } from "./stock.js"
 
-const mostrarProductos = () =>{
+const mostrarProductos = (productos) =>{
     const contenedor = document.getElementById("producto-contenedor");
 
     productos.forEach(producto => {
         const div = document.createElement("div");
         div.classList.add("card")
-
         div.innerHTML +=`<div class="card" style="width: 18rem;">
                             <img src="${producto.img}" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -20,11 +18,11 @@ const mostrarProductos = () =>{
                         `
     contenedor.appendChild(div)
 
-    const boton = document.getElementById(`boton${producto.id}`)
+    const boton = document.getElementById(`boton${producto.id}`);
     boton.addEventListener('click', ()=>{
        validarProductoRepetido(producto.id);
         })                
     });
 };    
 
-mostrarProductos(productos);
+export { mostrarProductos };
