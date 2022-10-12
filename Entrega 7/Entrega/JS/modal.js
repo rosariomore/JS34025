@@ -15,6 +15,16 @@ cerrarCarrito.addEventListener('click', () => {
     modalContenedor.classList.toggle('modal-active')
 });
 
+const btn = document.getElementById('btn-cerrar-carrito');
+
+btn.addEventListener('click', () => {
+Toastify({
+    text: 'Gracias! Te esperamos la próxima! =)',
+    duration: 3000
+    }).showToast();
+});
+
+
 modalContenedor.addEventListener('click', () => {
     cerrarCarrito.click()
 });
