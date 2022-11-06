@@ -37,17 +37,19 @@ modalCarrito.addEventListener('click', (e) => {
             text: "Desea eliminar este producto?...",
             showCancelButton: true,
             confirmButtonColor: "#43D8CC",
-            cancelButtonColor: "#FF7254",
+            cancelButtonColor: "#C83437",
             confirmButtonText: "Eliminar",
             cancelButtonText: "Cancelar",
+            imageWith: 600,
+            imageHeigth: 400,
+            background: "url(../imagenes/eliminar.jpg)"
         }).then((result) => {
             if (result.isConfirmed) {
                 eliminarProductoCarrito(e.target.value)
-                Swal.fire(
-                    "Listo!",
-                    "El producto ha sido eliminado.",
-                    "success"
-                )
+                Swal.fire({
+                text: "El producto ha sido eliminado.",
+                background: "url(../imagenes/fondo.jpg)"
+                })
             }
         })
     };

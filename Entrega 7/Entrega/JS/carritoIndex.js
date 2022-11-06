@@ -63,4 +63,64 @@ const eliminarProductoCarrito = (productoId) => {
     pintarCarrito(carritoActualizado);
 };
 
-export{ agregarAlCarrito, validarProductoRepetido, pintarCarrito, eliminarProductoCarrito};
+const finalizarBoton = document.getElementById('finalizar');
+
+finalizarBoton.addEventListener('click', () => {
+    if (carrito.length === 0) {
+
+        Swal.fire({
+            text: "Tu carrito esta vacio!",
+            icon: 'warning',
+            iconColor:'#A50CA8',
+            confirmButtonColor: '#5cc6d0',
+            cancelButtonColor: '#C83437',
+            confirmButtonText: 'Ok!',
+            background: "url(../imagenes/compra.jpg)"
+            })
+
+
+    } else if (carrito.length > 0) {
+        Swal.fire({
+            title: 'COMPRAR',
+            text: 'Desea concretar la compra?',
+            iconColor:'#A50CA8',
+            showCancelButton: true,
+            confirmButtonColor: '#5cc6d0',
+            cancelButtonColor: '#C83437',
+            confirmButtonText:'Si, comprar!',
+            cancelButtonText:'No aún',
+            position: top,
+            imageWith: 600,
+            imageHeigth: 400,
+            background: "url(../imagenes/compra.jpg)"
+
+        }).then((result)=>{
+            if(result.isConfirmed){
+                while (carrito.length > 0) {
+                    carrito.pop()
+                }
+                Swal.fire({
+                    title: 'Felicitaciones!',
+                    text: 'Tu pedido ha sido enviado',
+                    icon:'success',
+                    iconColor:'#5cc6d0',
+                    position: top,
+                    imageWith: 400,
+                    imageHeigth: 400,
+                    background: "url(../imagenes/compra.jpg)"
+                    })
+                    actualizarTotalesCarrito(carrito)
+                    pintarCarrito(carrito)
+
+            }
+
+        })
+
+    }
+
+
+})
+
+
+
+export { agregarAlCarrito, validarProductoRepetido, pintarCarrito, eliminarProductoCarrito };

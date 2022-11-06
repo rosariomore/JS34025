@@ -7,7 +7,6 @@ const productos = [
         precio: 550050,
         cantidad: 1,
     },
-
     {
         id: 2,
         nombre: "París",
@@ -24,6 +23,7 @@ const productos = [
         precio: 530800,
         cantidad: 1,
     }
+    
 ];
 
 export { productos};

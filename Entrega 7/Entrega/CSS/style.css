@@ -10,6 +10,19 @@
     padding-left: 5%;
     padding-right: 5%;
 }
+footer{
+    background:rgb(232, 255, 247);
+}
+footer {
+    color: cadetblue;
+    text-align: center;
+}
+#iconos i {
+    font-size:18px;
+    color: cadetblue;
+    padding: 2 8px;
+}
+
 /* DESTINOS */
 .card{
     margin: 20px;
@@ -66,7 +79,7 @@
 }
 .botoncarrito{
     border: none;
-    background-color: rgb(168, 210, 252);
+    background-color: rgb(232, 255, 247);
 
 }
 .productoEnCarrito {
@@ -77,6 +90,20 @@
     padding: 5px 10px;
     display: flex;
     justify-content: space-between;
+}
+
+/*CONtACTO*/
+.contacto{
+    padding: 1% 35%;
+    text-align: center;
+}
+.mb-3{
+    padding: 15px;
+}
+ 
+/* NOSOTROS */
+.nosotros{
+    padding: 15px;    
 }
 
 /* SERVICOS */
